@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="1b0a34d5-2e4c-4468-a4e9-17171de2df65" 
+        solutionId="1b0a34d5-2e4c-4468-a4e9-17171de2df65" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="FoodGuide"
+        sharePointProductVersion="15.0">
+</package>
