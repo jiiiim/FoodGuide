@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB6B6030-EEA5-41AF-8B25-60048FAEE15C}</ProjectGuid>
+    <ProjectGuid>{E329A20D-398F-4355-A79E-43EE509D7DF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FoodGuide</RootNamespace>
@@ -41,29 +41,103 @@
     <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Linq, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FoodGuideWP\FoodGuideWP.ascx.cs">
+      <DependentUpon>FoodGuideWP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FoodGuideWP\FoodGuideWP.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FoodGuideWP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LINQSP\foodguide.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\Main\Main.feature">
+      <FeatureId>{8fc32e7e-105f-4a67-a953-9410f7662c12}</FeatureId>
+    </None>
+    <None Include="Features\VisitedPlaces\VisitedPlaces.feature">
+      <FeatureId>{94d2948a-7ff6-461f-b672-c8906f1e5d80}</FeatureId>
+    </None>
+    <None Include="Features\Tags\Tags.feature">
+      <FeatureId>{87e60452-e7a6-4d1e-8bc7-59085bb9610d}</FeatureId>
+    </None>
+    <None Include="Features\Places\Places.feature">
+      <FeatureId>{d1ef05d9-345d-4edb-94bc-de165a356d9c}</FeatureId>
+    </None>
+    <None Include="FoodGuideWP\FoodGuideWP.webpart" />
+    <None Include="FoodGuideWP\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{84581ded-cb82-4fa2-a6d2-f925126a7d82}</SharePointProjectItemId>
+    </None>
     <None Include="key.snk" />
+    <None Include="Lists\Places\PlacesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{61bf8363-4a14-47c9-a95e-bc6246f4390f}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Places\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{90363b1d-f856-4c81-9a86-477d768152f4}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Tags\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6bcfe85b-733a-4334-8cda-d2d7279f9e13}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\Tags\TagsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7ee51c02-8f36-4316-a2b1-8b43e6b00457}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\VisitedPlaces\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9b3ed675-5d1b-42c5-b419-a92a858812de}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\VisitedPlaces\VisitedPlacesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b4613f90-3210-44b6-b9ee-245ab78b32d6}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
-      <PackageId>{1b0a34d5-2e4c-4468-a4e9-17171de2df65}</PackageId>
+      <PackageId>{5567e85a-597c-472f-b606-5067481b95fc}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
+    <Content Include="Features\Main\Main.Template.xml">
+      <DependentUpon>Main.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\VisitedPlaces\VisitedPlaces.Template.xml">
+      <DependentUpon>VisitedPlaces.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Tags\Tags.Template.xml">
+      <DependentUpon>Tags.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Places\Places.Template.xml">
+      <DependentUpon>Places.feature</DependentUpon>
+    </Content>
+    <Content Include="FoodGuideWP\Elements.xml" />
+    <Content Include="FoodGuideWP\FoodGuideWP.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>FoodGuideWP.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="Lists\Places\Elements.xml" />
+    <Content Include="Lists\Places\PlacesInstance\Elements.xml" />
+    <Content Include="Lists\Places\Schema.xml" />
+    <Content Include="Lists\Tags\Elements.xml" />
+    <Content Include="Lists\Tags\Schema.xml" />
+    <Content Include="Lists\Tags\TagsInstance\Elements.xml" />
+    <Content Include="Lists\VisitedPlaces\Elements.xml" />
+    <Content Include="Lists\VisitedPlaces\Schema.xml" />
+    <Content Include="Lists\VisitedPlaces\VisitedPlacesInstance\Elements.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

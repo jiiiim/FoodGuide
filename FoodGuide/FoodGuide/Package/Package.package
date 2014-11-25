@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package dslVersion="1.0.0.0" 
-        Id="1b0a34d5-2e4c-4468-a4e9-17171de2df65" 
-        solutionId="1b0a34d5-2e4c-4468-a4e9-17171de2df65" 
-        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
-        name="FoodGuide"
-        sharePointProductVersion="15.0">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5567e85a-597c-472f-b606-5067481b95fc" solutionId="5567e85a-597c-472f-b606-5067481b95fc" resetWebServer="false" sharePointProductVersion="15.0" name="FoodGuide" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="87e60452-e7a6-4d1e-8bc7-59085bb9610d" />
+    <featureReference itemId="d1ef05d9-345d-4edb-94bc-de165a356d9c" />
+    <featureReference itemId="94d2948a-7ff6-461f-b672-c8906f1e5d80" />
+    <featureReference itemId="8fc32e7e-105f-4a67-a953-9410f7662c12" />
+  </features>
 </package>

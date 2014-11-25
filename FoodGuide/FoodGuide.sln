@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodGuide", "..\..\..\..\Documents\Visual Studio 2013\Projects\FoodGuide\FoodGuide.csproj", "{E329A20D-398F-4355-A79E-43EE509D7DF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodGuide", "FoodGuide\FoodGuide.csproj", "{E329A20D-398F-4355-A79E-43EE509D7DF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

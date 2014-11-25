@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="VisitedPlaces" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/VisitedPlaces" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x01002b0fee343a1a4eeaa4b87390896f7b75" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{a0cd3fe5-81c3-4d53-8365-0e93e9a5798d}" Name="Place" /><FieldRef ID="{25161e3b-c6f5-4bde-a883-f0cbee62a2c6}" Name="Tags" /><FieldRef ID="{938b5736-2e42-4975-950e-ed0628333deb}" Name="Interior" /><FieldRef ID="{468100b7-9274-4c32-871b-bc5001e00de9}" Name="Exterior" /><FieldRef ID="{d2e55b97-d619-40a0-bf43-85df1dea45df}" Name="Price" /><FieldRef ID="{ce3293d4-836e-4d16-bf89-d62903f520f9}" Name="Food" /><FieldRef ID="{100332fa-856c-482c-b98e-4517b3d0c08d}" Name="Audience1" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field Name="Place" ID="{a0cd3fe5-81c3-4d53-8365-0e93e9a5798d}" DisplayName="Place" Type="Lookup" DisplayName="Place" List="Lists/Places" Required="TRUE" Overwrite="TRUE" ShowField="Title"/>
+      <Field Name="Tags" ID="{25161e3b-c6f5-4bde-a883-f0cbee62a2c6}" DisplayName="Tags" Type="LookupMulti" Required="TRUE" DisplayName="Tags" List="Lists/Tags" Mult="TRUE"Overwrite="TRUE" ShowField="Title" />
+      <Field Name="Interior" ID="{938b5736-2e42-4975-950e-ed0628333deb}" DisplayName="Interior" Type="Number" /><Field Name="Exterior" ID="{468100b7-9274-4c32-871b-bc5001e00de9}" DisplayName="Exterior" Type="Number" /><Field Name="Price" ID="{d2e55b97-d619-40a0-bf43-85df1dea45df}" DisplayName="Pricing" Type="Number" /><Field Name="Food" ID="{ce3293d4-836e-4d16-bf89-d62903f520f9}" DisplayName="Food" Type="Number" /><Field Name="Audience1" ID="{100332fa-856c-482c-b98e-4517b3d0c08d}" DisplayName="Audience" Type="Number" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="Place" /><FieldRef Name="Tags" /><FieldRef Name="Interior" /><FieldRef Name="Exterior" /><FieldRef Name="Price" /><FieldRef Name="Food" /><FieldRef Name="Audience1" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
